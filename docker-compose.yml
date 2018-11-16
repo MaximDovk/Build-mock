@@ -1,0 +1,7 @@
+version: '3.6'
+
+services:
+  server:
+    image: 'shiftby.tech:5043/lsla:latest'
+    ports:
+      - 8888:8888

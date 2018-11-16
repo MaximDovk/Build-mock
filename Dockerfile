@@ -1,5 +1,13 @@
-FROM alpine:3.7
+FROM node:8.12-alpine
 
-ENTRYPOINT ls
+WORKDIR /app
 
-CMD -la
+COPY ./src /app/
+
+ARG BUILD_NUMBER
+
+ENV BUILD_NUMBER $BUILD_NUMBER
+
+EXPOSE 8888
+
+CMD npm start
