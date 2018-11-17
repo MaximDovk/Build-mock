@@ -2,7 +2,7 @@ const http = require('http');
 const port = 8888;
 
 const requestHandler = (request, response) => {
-    response.end(process.env.BUILD_NUMBER)
+    response.end(`Hello world: ${process.env.BUILD_NUMBER}`)
 };
 
 const server = http.createServer(requestHandler);
