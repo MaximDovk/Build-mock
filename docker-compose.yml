@@ -5,3 +5,5 @@ services:
     image: 'shiftby.tech:5043/lsla:latest'
     ports:
       - 8888:8888
+    deploy:
+      replicas: 3
